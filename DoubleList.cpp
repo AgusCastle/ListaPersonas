@@ -1,5 +1,4 @@
 #include "DoubleList.h"
-
 #include <iostream>
 #include <cstdlib>
 
@@ -35,7 +34,18 @@ int DoubleList::Buscar(const Persona &persona)
 
 void DoubleList::Insertar(const Persona &persona)
 {
-
+	nuevo= new Nodo(persona);
+		if( Vacia())
+		{
+			inicio=nuevo;
+			fin=inicio;
+		}
+		else
+		{
+			inicio->atras=nuevo;
+			nuevo->siguiente=inicio;
+			inicio=nuevo;
+		}
 }
 
 

@@ -5,6 +5,17 @@
 
 using namespace std;
 
+Persona::Persona()
+{
+	nombre = "0";
+	ap_paterno = "0";
+	ap_materno = "0";
+	fecha_nacimiento = "0";
+	genero =0;
+	entidad_federativa ="0";
+	curp = "0";
+}
+
 Persona::Persona(string nom, string ap, string am, string fecha, char g, string e_fed)
 {
 	nombre = nom;
