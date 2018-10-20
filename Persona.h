@@ -12,7 +12,7 @@ private:
 	std::string curp;
 
 public:
-	
+	Persona();
 	Persona(std::string, std::string, std::string, std::string, char, std::string);
 	Persona(const Persona&);
 	~Persona();
