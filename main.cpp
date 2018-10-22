@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -13,14 +14,13 @@ int main()
 	DoubleList Lista=DoubleList();
 	Persona Registro;
 
-	std::string Nombre;
-	std::string ApellidoP;
-	std::string ApellidoM;
-	std::string FechaNac;
-	char sexo;
-	std::string EntidadFederativa;
+	string Nombre = "Julio Cesar";
+	string ApellidoP = "Aguilar";
+	string ApellidoM = "Ramos";
+	string FechaNac = "03/noviembre/1998";
+	char sexo = 'H';
+	string EntidadFederativa = "mexico";
 
-  	int valor;
 	char seguir = 's';
 	while (seguir != 'n')
 	{
@@ -30,7 +30,7 @@ int main()
 
 			cout << "Introduce lo que se pide en el formato\n\n";
 			cout << "Nombre/s: ";
-			cin >> Nombre;
+			getline(cin,Nombre);
 			cout << "Apellido Paterno: ";
 			cin >> ApellidoP;
 			cout << "Apellido Materno: ";
@@ -49,10 +49,19 @@ int main()
 			break;
 		case 3:
 			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			Registro=Persona(Nombre,ApellidoP,ApellidoM,FechaNac,sexo,EntidadFederativa);
+			Registro.GenerarCurp();//prueba
+			break;
     	default:
 			cout << "No seleccionaste nada." << endl;
 			break;
 		}
+
 		system("pause");
 		system("cls");
 	}
