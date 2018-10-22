@@ -45,31 +45,38 @@ Persona::~Persona()
 {
 }
 
-string Persona::getNombre(){
+string Persona::getNombre() const
+{
 		return nombre;
 }
 
-string Persona::getAp(){
+string Persona::getAp() const
+{
 	return ap_paterno;
 }
 
-string Persona::getAm(){
+string Persona::getAm() const
+{
 	return ap_materno;
 }
 
-string Persona::getFechaNacimiento(){
+string Persona::getFechaNacimiento() const
+{
 	return fecha_nacimiento;
 }
 
-char Persona::getGenero(){
+char Persona::getGenero() const 
+{
 	return genero;
 }
 
-string Persona::getEntidadFederativa(){
+string Persona::getEntidadFederativa() const 
+{
 	return entidad_federativa;
 }
 
-string Persona::getCurp(){
+string Persona::getCurp() const 
+{
 	return curp;
 }
 
@@ -166,7 +173,7 @@ void Persona::GenerarCurp(){
 	aux = to_string(k);
 	Curp[17] = aux[0];
 	setCurp(Curp);
-	cout << "Su CURP es: " << getCurp() << endl;
+	//cout << "Su CURP es: " << getCurp() << endl;
 }
 
 string Persona::Mes(string _mes){

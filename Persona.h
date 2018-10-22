@@ -17,13 +17,13 @@ public:
 	Persona(const Persona&);
 	~Persona();
 
-	std::string getNombre();
-	std::string getAp();
-	std::string getAm();
-	std::string getFechaNacimiento();
-	char getGenero();
-	std::string getEntidadFederativa();
-	std::string getCurp();
+	std::string getNombre() const;
+	std::string getAp() const;
+	std::string getAm() const;
+	std::string getFechaNacimiento() const;
+	char getGenero() const;
+	std::string getEntidadFederativa() const;
+	std::string getCurp() const;
 
 	void setCurp(std::string);
 

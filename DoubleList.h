@@ -1,4 +1,5 @@
 #include "Nodo.h"
+#include <string>
 
 class DoubleList
 {
@@ -8,11 +9,12 @@ private:
 	Nodo * nuevo;
 	Nodo * iterador;
 	Nodo * fin;
+	bool ComparacionAlfabeto(std::string, std::string);
 public:
 	DoubleList();
 	~DoubleList();
 	bool Vacia();
-	int Buscar(const Persona&);
+	int Buscar(const std::string&);
 	void Insertar(const Persona&);
 	void Eliminar(const Persona&);
 	void Ordenar();
