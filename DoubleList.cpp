@@ -57,12 +57,42 @@ void DoubleList::Insertar(const Persona &persona)
     	fin = nuevo;
 	}
 	nuevo->valor.GenerarCurp();
+	count++;
 }
 
 
-void DoubleList::Eliminar(const Persona &persona)
+void DoubleList::Eliminar(const string &curp)
 {
-
+	if (!Vacia())
+  {
+    if (Buscar(curp) != -1)
+    {
+      if (iterador == inicio && iterador == fin)
+      {
+        inicio = nullptr;
+        fin =  nullptr;
+      }
+      else if (iterador == inicio)
+      {
+        iterador->siguiente->atras = nullptr;
+        inicio = inicio->siguiente;
+      }
+      else if (iterador == fin)
+      {
+        iterador->atras->siguiente = nullptr;
+        fin = fin->atras;
+      }
+      else
+      {
+        iterador->atras->siguiente = iterador->siguiente;
+        iterador->siguiente->atras = iterador->atras;
+      }
+      delete iterador;
+      count--;
+    }
+    else
+      cout << " No se encuentra en la lista." << endl;
+  }
 }
 
 

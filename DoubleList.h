@@ -16,7 +16,7 @@ public:
 	bool Vacia();
 	int Buscar(const std::string&);
 	void Insertar(const Persona&);
-	void Eliminar(const Persona&);
+	void Eliminar(const std::string&);
 	void Ordenar();
 	void Mostrar();
 };

@@ -47,6 +47,10 @@ int main()
 			Lista.Insertar(Registro);
 			break;
 		case 2:
+			system("cls");
+			Lista.Mostrar();
+			cout << "Ingresa el curp de la persona a eliminar: ";getline(cin,Nombre);
+			Lista.Eliminar(Nombre);
 			break;
 		case 3:
 			break;
